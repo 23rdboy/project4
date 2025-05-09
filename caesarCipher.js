@@ -8,7 +8,7 @@ const listLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
 
 let newText = '';
 
-btnEncrypt.addEventListener('click', () => {
+btnEncrypt.addEventListener('click', function encrypt() {
     const textarea = document.querySelector('#text');
     const keyValue = Number(key.value);
 
@@ -29,7 +29,7 @@ btnEncrypt.addEventListener('click', () => {
     newText = '';
 });
 
-btnDecrypt.addEventListener('click', () => {
+btnDecrypt.addEventListener('click', function decrypt() {
     const textarea = document.querySelector('#text');
     const keyValue = Number(key.value);
 
@@ -49,3 +49,6 @@ btnDecrypt.addEventListener('click', () => {
     }
     newText = '';
 });
+
+module.exports = {encrypt};
+module.exports = {decrypt};
